@@ -1,0 +1,69 @@
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .top-panel {
+    margin: 20px;
+}
+
+.container .popular-apps {
+    border: #aaa 1px solid;
+    border-radius: 10px;
+    position: relative;
+    display: table;
+    margin: 25px auto;
+}
+.container .popular-apps .app {
+    float: left;
+    margin: 10px 20px;
+}
+.container .popular-apps .app .icon {
+
+}
+.container .apps {
+    margin: 20px 40px;
+    float: left;
+    width:700px;
+}
+.container .apps .app {
+    margin: 0 20px;
+    float: left;
+}
+
+.container .apps .app .download-btn a {
+    width: 120px;
+    height: 40px;
+    background: blueviolet;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 7px;
+    display: block;
+    color: white;
+}
+.container .apps .app .title {
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.container .apps .app .description {
+    margin: 20px;
+}
+.container .categories {
+    margin: 0 0 0 20px;
+    float: left;
+    min-height: 300px;
+    border-right: #aaa 1px solid;
+    padding-right: 20px;
+}
+.container .categories ul li {
+    margin: 0 0 20px -40px;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+.center-block {float: none !important}
+
+.clear {
+    clear:both;
+}
+
