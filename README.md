@@ -1,4 +1,4 @@
-spring-shopping-cart
+spring-app-store
 ====================
 
-Spring Shopping Cart
+Spring App Store
