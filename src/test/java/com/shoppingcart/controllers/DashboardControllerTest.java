@@ -1,8 +1,8 @@
 package com.shoppingcart.controllers;
 
 import com.shoppingcart.service.ShopService;
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.Before;
+//import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -23,7 +23,7 @@ public class DashboardControllerTest {
 
     private MockMvc mockMvc;
 
-    @Before
+   /* @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(dashboardController).build();
@@ -33,6 +33,6 @@ public class DashboardControllerTest {
     @Test
     public void testSaveComment_RequestCommentNotFound() throws Exception {
 
-    }
+    }*/
 
 }
