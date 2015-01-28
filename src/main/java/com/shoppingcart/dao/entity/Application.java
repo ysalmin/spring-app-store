@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -179,10 +180,7 @@ public class Application {
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + previewImageUrl.hashCode();
-        result = 31 * result + detailedImageUrl.hashCode();
-        return result;
+        return Objects.hash(this.previewImageUrl, this.detailedImageUrl, this.timeUploaded);
     }
 
 }

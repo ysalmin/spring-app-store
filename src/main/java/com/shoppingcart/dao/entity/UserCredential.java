@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.Objects;
 
 /**
  * Created by ysalmin on 21.07.2014.
@@ -69,9 +70,6 @@ public class UserCredential {
 
     @Override
     public int hashCode() {
-        int result = login.hashCode();
-        result = 31 * result + pass.hashCode();
-        result = 31 * result + role.hashCode();
-        return result;
+        return Objects.hash(this.login, this.pass, this.role);
     }
 }
