@@ -162,4 +162,27 @@ public class Application {
         this.id = id;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Application that = (Application) o;
+
+        if (!description.equals(that.description)) return false;
+        if (!detailedImageUrl.equals(that.detailedImageUrl)) return false;
+        if (!name.equals(that.name)) return false;
+        if (!previewImageUrl.equals(that.previewImageUrl)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + previewImageUrl.hashCode();
+        result = 31 * result + detailedImageUrl.hashCode();
+        return result;
+    }
+
 }

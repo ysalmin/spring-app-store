@@ -52,4 +52,26 @@ public class UserCredential {
     public UserRole getRole() {
         return role;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UserCredential that = (UserCredential) o;
+
+        if (!login.equals(that.login)) return false;
+        if (!pass.equals(that.pass)) return false;
+        if (role != that.role) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = login.hashCode();
+        result = 31 * result + pass.hashCode();
+        result = 31 * result + role.hashCode();
+        return result;
+    }
 }
