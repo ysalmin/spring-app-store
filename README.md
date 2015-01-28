@@ -1,4 +1,4 @@
 spring-app-store
 ====================
 
-Spring App Store
+Techs used: Spring MVC, Spring Security, Spring Data, Hibernate, Hibernate Template, H2 
