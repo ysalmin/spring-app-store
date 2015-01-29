@@ -168,8 +168,11 @@ public class StorageUtils {
                 if (file.getName().toLowerCase().endsWith(".txt")) {
                     Properties properties = new Properties();
                     InputStream input = new FileInputStream(file);
-                    //load properties from file
-                    properties.load(input);
+                    try {
+                        properties.load(input); //load properties from file
+                    } finally {
+                        input.close();
+                    }
                     categoryName = properties.getProperty("package").toLowerCase();
                 } else if (file.getName().toLowerCase().endsWith(".jpg")) {
                     BufferedImage bufferedImage = ImageIO.read(file);
@@ -226,9 +229,14 @@ public class StorageUtils {
                         logger.error("Num of txt files is bigger than allowed in settings.");
                         return false;
                     }
-                    Properties properties = new Properties();
                     InputStream input = new FileInputStream(file);
-                    properties.load(input);
+                    Properties properties = new Properties();
+                    try {
+                        properties.load(input);
+                    } finally {
+                        input.close();
+                    }
+
                     if (properties.size() != 2) {
                         logger.error("App file contains wrong amount of settings.");
                         return false;
