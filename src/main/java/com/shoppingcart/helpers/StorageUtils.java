@@ -76,7 +76,9 @@ public class StorageUtils {
             byte[] bytes = file.getBytes();
             File dir = new File(getFullFileName(path, file));
             if (!dir.exists()) {
-                dir.mkdirs();
+                if(!dir.mkdirs()) {
+                    throw new IOException("Cant create folders");
+                }
             }
             File serverFile = new File(dir.getAbsolutePath() + File.separator + file.getOriginalFilename());
             BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
@@ -109,7 +111,9 @@ public class StorageUtils {
         File destinationFolder = new File(getFullFileName(path, file));
 
         if (!destinationFolder.exists()) {
-            destinationFolder.mkdirs();
+            if(!destinationFolder.mkdirs()) {
+                throw new IOException("Cant create folders");
+            }
         }
 
         ZipFile zipFile = new ZipFile(source);
