@@ -116,11 +116,11 @@ public class Application {
     }
 
     public Date getTimeUploaded() {
-        return timeUploaded;
+        return (Date) timeUploaded.clone();
     }
 
     public void setTimeUploaded(Date timeUploaded) {
-        this.timeUploaded = timeUploaded;
+        this.timeUploaded = (Date) timeUploaded.clone();
     }
 
     public String getPreviewImageUrl() {
