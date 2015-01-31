@@ -136,7 +136,9 @@ public class StorageUtils {
     public void cleanUpFiles(MultipartFile file, String path) throws IOException {
         File folderToClean = new File(getFullFileName(path, file));
         FileUtils.cleanDirectory(folderToClean);
-        folderToClean.delete();
+        if(!folderToClean.delete()){
+            throw new IOException("Cant remove folder " + file.getName());
+        }
     }
 
     private boolean checkFileFormat(MultipartFile file, String path) throws ZipException {
