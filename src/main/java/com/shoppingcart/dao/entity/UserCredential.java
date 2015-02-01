@@ -61,11 +61,8 @@ public class UserCredential {
 
         UserCredential that = (UserCredential) o;
 
-        if (!login.equals(that.login)) return false;
-        if (!pass.equals(that.pass)) return false;
-        if (role != that.role) return false;
+        return login.equals(that.login) && pass.equals(that.pass) && role == that.role;
 
-        return true;
     }
 
     @Override

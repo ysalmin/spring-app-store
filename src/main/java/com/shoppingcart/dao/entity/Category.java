@@ -72,9 +72,8 @@ public class Category {
 
         Category category = (Category) o;
 
-        if (!name.equals(category.name)) return false;
+        return name.equals(category.name);
 
-        return true;
     }
 
     @Override

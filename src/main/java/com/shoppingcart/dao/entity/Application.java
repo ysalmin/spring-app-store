@@ -172,10 +172,7 @@ public class Application {
 
         if (!description.equals(that.description)) return false;
         if (!detailedImageUrl.equals(that.detailedImageUrl)) return false;
-        if (!name.equals(that.name)) return false;
-        if (!previewImageUrl.equals(that.previewImageUrl)) return false;
-
-        return true;
+        return name.equals(that.name) && previewImageUrl.equals(that.previewImageUrl);
     }
 
     @Override
